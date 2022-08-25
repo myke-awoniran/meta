@@ -8,6 +8,7 @@ export function controller(routPrefix: string) {
   const router = AppRouter.getInstance();
   return function (target: Function) {
     // LOOPING THROUGH EACH METHOD OF THE OBJECT
+
     for (const key in target.prototype) {
       const routeHandler = target.prototype.key;
 
@@ -25,7 +26,7 @@ export function controller(routPrefix: string) {
         key
       );
 
-      // DISPATCHING THE METADATA ARRAY PROPERTY
+      // DISPATCHING THE MIDDLEWARE ARRAY METADATA
       const middlewares =
         Reflect.getMetadata(MetadataKeys.middleware, target.prototype, key) ||
         [];

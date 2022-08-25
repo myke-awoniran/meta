@@ -15,7 +15,7 @@ function controller(routPrefix) {
             const path = Reflect.getMetadata(index_decorators_1.MetadataKeys.path, target.prototype, key);
             // GETTING THE REQUEST HANDLER
             const method = Reflect.getMetadata(index_decorators_1.MetadataKeys.method, target.prototype, key);
-            // DISPATCHING THE METADATA ARRAY PROPERTY
+            // DISPATCHING THE MIDDLEWARE ARRAY METADATA
             const middlewares = Reflect.getMetadata(index_decorators_1.MetadataKeys.middleware, target.prototype, key) ||
                 [];
             // ATTACHING THE ROUTE TO THE HANDLER
