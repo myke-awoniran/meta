@@ -1,16 +1,16 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.controller = exports.router = void 0;
+exports.controller = void 0;
 require("reflect-metadata");
-const express_1 = require("express");
-exports.router = (0, express_1.Router)();
+const AppRouter_1 = require("../AppRouter");
 function controller(routPrefix) {
+    const router = AppRouter_1.AppRouter.getInstance();
     return function (target) {
         for (const key in target.prototype) {
             const routeHandler = target.prototype.key;
             const path = Reflect.getMetadata('path', target.prototype, key);
             if (path) {
-                exports.router.get(`${routPrefix}${path}`, routeHandler);
+                router.get(`${routPrefix}${path}`, routeHandler);
             }
         }
     };

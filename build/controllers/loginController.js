@@ -12,9 +12,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const index_decorators_1 = require("../decorators/index.decorators");
 let loginController = class loginController {
     login(req, res) {
+        console.log(req.originalUrl);
         res.status(200).json({
+            status: 'success',
             message: 'kindly login on this route',
-            path: req.get('path'),
         });
     }
 };
