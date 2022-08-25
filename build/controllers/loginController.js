@@ -10,9 +10,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const index_decorators_1 = require("../decorators/index.decorators");
-let loginController = class loginController {
+// console.log(get, controller);
+let LoginController = class LoginController {
     login(req, res) {
-        console.log(req.originalUrl);
         res.status(200).json({
             status: 'success',
             message: 'kindly login on this route',
@@ -24,7 +24,7 @@ __decorate([
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", void 0)
-], loginController.prototype, "login", null);
-loginController = __decorate([
+], LoginController.prototype, "login", null);
+LoginController = __decorate([
     (0, index_decorators_1.controller)('/auth')
-], loginController);
+], LoginController);

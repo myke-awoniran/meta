@@ -1,5 +1,5 @@
-import { NextFunction, Request, Response } from 'express';
 import { get } from '../decorators/routes.methods.';
+import { NextFunction, Request, Response } from 'express';
 import { controller } from '../decorators/controller.decorators';
 
 @controller('')
